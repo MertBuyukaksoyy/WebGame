@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mert Büyükaksoy">
+    <title>Saving Adana</title>
+</head>
+<body>
+    <script type="text/javascript" src="Script.js">
+    </script>
+
+    <div id="gameFrame" class="crosshair">
+
+    <div id="healthBar"></div>
+  
+    <div class="enemy" id="enemy1" onclick="Shoot(this)"></div>
+    <div class="enemy" id="enemy2" onclick="Shoot(this)"></div>
+    <div class="enemy" id="enemy3" onclick="Shoot(this)"></div>
+    <div class="enemy" id="enemy4" onclick="Shoot(this)"></div>
+    <div class="enemy" id="enemy5" onclick="Shoot(this)"></div>
+    <div class="enemy" id="enemy6" onclick="Shoot(this)"></div>
+  
+    </div>
+    
+
+    <style>
+        body{
+            background-color: black;
+        }
+        .crosshair {cursor: crosshair;}
+            #gameFrame {
+            height: 670px;
+            width: 1000px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            background-image:url("ara-sokak.jpg");
+        }
+
+        #healthBar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 100%;
+            background-color: red;
+            transition: width .5s;
+        }
+        .enemy {
+            width: 150px;
+            height: 400px;
+            position: absolute;
+            bottom: -400px;
+            background-image: url("dusman.jpg");
+           
+        }
+        .enemy.dead {
+	    transform: rotate(-90deg);
+	    transform-origin: bottom left;
+	    bottom: -50%;
+	    margin-left: 10%;
+        }
+
+        .enemy.showing {
+            bottom: 0;
+        }
+
+
+        #enemy1 { left: 5px; }
+        #enemy2 { left: 165px; }
+        #enemy3 { left: 325px; }
+        #enemy4 { left: 485px; }
+        #enemy5 { left: 645px; }
+        #enemy6 { left: 220px; }
+        #enemy7 { left: 100px; }
+        #enemy8 { left: 80px; }
+        #enemy9 { left: 530px; }
+        #enemy10 { left: 390px; }
+
+        
+    </style>
+    
+  
+    <p style="text-align: center;">
+    <button onclick="randomEnemyAttacks()">👉Yeni Oyun</button>
+    </p>	
+  
+  </div>
+</body>
+</html>
